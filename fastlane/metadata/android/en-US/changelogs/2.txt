@@ -1,0 +1,1 @@
+Guided setup, Greek and English interface, dark theme and pairing-service improvements.

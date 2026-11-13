@@ -1,0 +1,1 @@
+Battery cycle estimates and health readings for supported Samsung Galaxy phones

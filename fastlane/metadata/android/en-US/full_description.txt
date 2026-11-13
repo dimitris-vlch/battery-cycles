@@ -1,0 +1,1 @@
+Estimates battery cycles from Samsung battery-service data and shows available health readings and first-use date. Requires Android 11+, ARM64, Wi-Fi and Wireless debugging pairing. No computer required by the intended setup flow. Cached results include the last-read time. Experimental: wireless pairing still requires end-to-end validation. Not affiliated with Samsung.
