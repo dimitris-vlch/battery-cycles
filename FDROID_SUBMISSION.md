@@ -1,9 +1,21 @@
 # F-Droid submission preparation
 
-Package: gr.dimitris.batterycycles
-License: Apache-2.0 (dependency licenses in THIRD_PARTY_NOTICES.md)
-Source: https://github.com/dimitris-vlch/battery-cycles
-Category: System
-Build: app subdirectory, Gradle, JDK 17, Android SDK 36.
+Status: preparation only; not submitted or approved.
 
-Not yet submitted or approved. JitPack dependencies include native libraries; F-Droid reviewers may require source-built dependencies and build recipes. Do not bypass binary scanning. Verify wireless pairing before requesting inclusion.
+## Completed
+- Public source repository and Apache-2.0 project license.
+- Dependency license references, including sun-security GPL-2.0 Classpath exception.
+- Fastlane description, icon, screenshot, changelog and v1.1 source tag.
+- Unsigned release build succeeds with JDK 17 and Android SDK 36, without private signing keys.
+- Draft build metadata: fdroid/gr.dimitris.batterycycles.yml. The build is deliberately disabled until verified.
+
+## Remaining before submission
+1. libadb-android 3.1.1 from JitPack includes native SPAKE2 code; prepare or locate an accepted source-build recipe.
+2. Conscrypt 2.5.3 includes native code; verify accepted dependency handling or provide a source-build recipe.
+3. Verify all transitive dependency licenses and notices, including sun-security-android 1.1.
+4. Run fdroid lint, scanner and the Linux F-Droid build environment. A successful ordinary Gradle build is not F-Droid validation.
+5. Resolve signing strategy: F-Droid's default signing differs from the GitHub APK; reproducible builds would allow retaining the upstream signature.
+6. Validate autonomous wireless pairing.
+7. Open a merge request at https://gitlab.com/fdroid/fdroiddata using a GitLab account. No authenticated GitLab client is configured in this workspace.
+
+Do not bypass scanner checks or label the draft as approved.
