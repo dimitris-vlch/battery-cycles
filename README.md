@@ -6,10 +6,10 @@ Battery cycle estimates and battery-health readings for supported Samsung Galaxy
 Get the signed APK from [Releases](https://github.com/dimitris-vlch/battery-cycles/releases). Android 11 or newer, ARM64.
 
 ## Setup
-Connect your phone to Wi-Fi, enable Developer options and Wireless debugging, then follow the app pairing instructions. Enter the six-digit code through the notification. A computer is not required by the intended setup flow. Wireless debugging must be available for fresh readings; cached readings are labelled with their timestamp.
+Connect your phone to Wi-Fi, enable Developer options and Wireless debugging, then follow the app pairing instructions. Pull down the notifications, tap the arrow on the Battery Cycles notification, tap "Code" and type the six-digit code. No computer is required. Wireless debugging must be available for fresh readings; cached readings are labelled with their timestamp.
 
 ## Limitations
-The Samsung usage counter divided by 100 is an estimate, not a manufacturer-certified cycle count. Tested readings came from an S23 Ultra. Other firmware may not expose the fields. End-to-end wireless pairing has not yet been verified in this project's recorded testing; report problems through Issues. This release is experimental.
+The Samsung usage counter divided by 100 is an estimate, not a manufacturer-certified cycle count. Tested readings came from an S23 Ultra. Other firmware may not expose the fields. End-to-end wireless pairing without a computer was verified on 2026-11-13 on a Galaxy S23 Ultra (SM-S918B, Android 17), from a clean install through pairing to a cycle reading. It has not been tested on other models; report problems through Issues.
 
 ## Build
 Install JDK 17 and Android SDK platform 36. Set ANDROID_HOME, then run `./gradlew assembleDebug` or `./gradlew assembleRelease`. Release builds are unsigned without a private keystore.properties file. Signing keys are never included in this repository.
